@@ -115,10 +115,10 @@ Instrukcje krok po kroku, jak uruchomić część backendową aplikacji.
 ## Konfiguracja obowiązkowa
 
 Żeby móc dodawać kontrybucje do projektu, należy zainstalować w VSCode 2 rozszerzenia: "prettier" oraz "autopep8". Są to formatery kodu, dbające o jego spójność. Aby automatycznie formatowały, należy zaznaczyć w VSCode opcje automatycznego zapisu oraz podać w ustawieniach prettier ścieżkę do pliku konfiguracyjnego, tj. '.prettierrc'.
-**Ponadtdo nie commitujemy bezpośrednio na maina, tylko tworzymy pull requesty na dev'a.**
+**Ponadto nie commitujemy bezpośrednio na maina, tylko tworzymy pull requesty na dev'a.**
 
 ![image](https://github.com/user-attachments/assets/c0437fce-4504-4758-bb76-e09c314e9176)
 ![image](https://github.com/user-attachments/assets/1834b36d-f8d9-4ddd-bc2b-64670904eaf5)
 
 
-Po wykonaniu powyższych kroków zarówno frontend, jak i backend Twojej aplikacji powinny działać lokalnie. Frontend będzie łączył się z backendem pod skonfigurowanym adresem API. Pamiętaj, aby dostosować ten plik `README.md` do specyfiki Twojego projektu!
+Po wykonaniu powyższych kroków zarówno frontend, jak i backend Twojej aplikacji powinny działać lokalnie. Frontend będzie łączył się z backendem pod skonfigurowanym adresem API.
