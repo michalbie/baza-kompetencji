@@ -1,5 +1,20 @@
 # Baza kompetencji
 
+## Zasady kontrybucji
+- frontend camelCase'em
+- backend w pythonie snake_case
+- obowiązkowa konfiguracja formatterów (w ostatniej sekcji szczegółowo opisana)
+- każdy ma swój branch, który na bieżąco rebase'uje do deva i z niego tworzy pull requesty na deva
+  
+  ```bash
+    git checkout dev
+    git pull
+    git checkout [twoj_branch]
+    git rebase dev
+    ```
+  ![image](https://github.com/user-attachments/assets/5a64a3d8-557d-48db-862f-d5cef55a754e)
+
+
 ## Wymagania
 
 Przed rozpoczęciem upewnij się, że masz zainstalowane następujące narzędzia:
