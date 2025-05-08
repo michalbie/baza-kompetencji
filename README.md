@@ -1,15 +1,29 @@
 # Baza kompetencji
 
+## Zasady kontrybucji
+- frontend camelCase'em
+- backend w pythonie snake_case
+- obowiązkowa konfiguracja formatterów (w ostatniej sekcji szczegółowo opisana)
+- każdy ma swój branch, który na bieżąco rebase'uje do deva i z niego tworzy pull requesty na deva
+  
+  ```bash
+    git checkout dev
+    git pull
+    git checkout [twoj_branch]
+    git rebase dev
+    ```
+  ![image](https://github.com/user-attachments/assets/5a64a3d8-557d-48db-862f-d5cef55a754e)
+
 
 ## Wymagania
 
 Przed rozpoczęciem upewnij się, że masz zainstalowane następujące narzędzia:
 
-* **Node.js** (dla frontendu, sprawdź wersję w pliku `.nvmrc` lub `package.json` jeśli istnieje)
-* **npm** lub **yarn** (menedżer pakietów dla frontendu)
-* **Python** (dla backendu, 3.9.13)
-* **pip** (menedżer pakietów dla Pythona)
-* **Git** (opcjonalnie, do klonowania repozytorium)
+-   **Node.js** (dla frontendu, sprawdź wersję w pliku `.nvmrc` lub `package.json` jeśli istnieje)
+-   **npm** lub **yarn** (menedżer pakietów dla frontendu)
+-   **Python** (dla backendu, 3.9.13)
+-   **pip** (menedżer pakietów dla Pythona)
+-   **Git** (opcjonalnie, do klonowania repozytorium)
 
 ## Uruchomienie - Frontend
 
@@ -25,12 +39,13 @@ Instrukcje krok po kroku, jak uruchomić część frontendową aplikacji.
 2.  **Zainstaluj zależności:**
     Użyj menedżera pakietów (npm lub yarn) aby zainstalować wszystkie niezbędne biblioteki i zależności wymienione w pliku `package.json`.
 
-    * **Jeśli używasz npm:**
+    -   **Jeśli używasz npm:**
+
         ```bash
         npm install
         ```
 
-    * **Jeśli używasz yarn:**
+    -   **Jeśli używasz yarn:**
         ```bash
         yarn install
         ```
@@ -38,7 +53,8 @@ Instrukcje krok po kroku, jak uruchomić część frontendową aplikacji.
 3.  **Uruchom serwer deweloperski frontendu:**
     Użyj skryptu startowego zdefiniowanego w `package.json`. Często używane skrypty to `start`, `dev` lub `serve`.
 
-    * **Jeśli używasz npm:**
+    -   **Jeśli używasz npm:**
+
         ```bash
         npm start
         # lub
@@ -47,7 +63,7 @@ Instrukcje krok po kroku, jak uruchomić część frontendową aplikacji.
         npm run serve
         ```
 
-    * **Jeśli używasz yarn:**
+    -   **Jeśli używasz yarn:**
         ```bash
         yarn start
         # lub
@@ -72,13 +88,14 @@ Instrukcje krok po kroku, jak uruchomić część backendową aplikacji.
 2.  **Utwórz i aktywuj wirtualne środowisko Pythona (zalecane):**
     Jeśli jeszcze tego nie zrobiłeś, utwórz wirtualne środowisko dla zależności backendu i aktywuj je.
 
-    * **Dla systemów Unix/macOS:**
+    -   **Dla systemów Unix/macOS:**
+
         ```bash
         python3 -m venv venv
         source venv/bin/activate
         ```
 
-    * **Dla systemu Windows:**
+    -   **Dla systemu Windows:**
         ```bash
         python -m venv venv
         .\venv\Scripts\activate
@@ -105,7 +122,7 @@ Instrukcje krok po kroku, jak uruchomić część backendową aplikacji.
 5.  **Uruchom serwer deweloperski backendu:**
     Sposób uruchomienia backendu zależy od używanego frameworka (np. Django, Flask).
 
-    * **Dla Django:**
+    -   **Dla Django:**
         Przejdź do katalogu zawierającego plik `manage.py` (jeśli nie jesteś już w nim) i uruchom:
         ```bash
         python manage.py runserver
@@ -114,11 +131,10 @@ Instrukcje krok po kroku, jak uruchomić część backendową aplikacji.
 
 ## Konfiguracja obowiązkowa
 
-Żeby móc dodawać kontrybucje do projektu, należy zainstalować w VSCode 2 rozszerzenia: "prettier" oraz "autopep8". Są to formatery kodu, dbające o jego spójność. Aby automatycznie formatowały, należy zaznaczyć w VSCode opcje automatycznego zapisu oraz podać w ustawieniach prettier ścieżkę do pliku konfiguracyjnego, tj. '.prettierrc'.
-**Ponadtdo nie commitujemy bezpośrednio na maina, tylko tworzymy pull requesty na dev'a.**
+Żeby móc dodawać kontrybucje do projektu, należy zainstalować w VSCode 2 rozszerzenia: "prettier" oraz "autopep8". Są to formatery kodu, dbające o jego spójność. Aby automatycznie formatowały, należy zaznaczyć w VSCode opcje automatycznego zapisu oraz podać w ustawieniach prettier ścieżkę do pliku konfiguracyjnego, tj. '.prettierrc.json' wraz z checkboxem o obowiązkowym pliku konfiguracyjnym. W VSCode należy również ustawić domyślny formatter na prettier.
+**Ponadto nie commitujemy bezpośrednio na maina, tylko tworzymy pull requesty na dev'a.**
 
 ![image](https://github.com/user-attachments/assets/c0437fce-4504-4758-bb76-e09c314e9176)
 ![image](https://github.com/user-attachments/assets/1834b36d-f8d9-4ddd-bc2b-64670904eaf5)
 
-
-Po wykonaniu powyższych kroków zarówno frontend, jak i backend Twojej aplikacji powinny działać lokalnie. Frontend będzie łączył się z backendem pod skonfigurowanym adresem API. Pamiętaj, aby dostosować ten plik `README.md` do specyfiki Twojego projektu!
+Po wykonaniu powyższych kroków zarówno frontend, jak i backend Twojej aplikacji powinny działać lokalnie. Frontend będzie łączył się z backendem pod skonfigurowanym adresem API.
